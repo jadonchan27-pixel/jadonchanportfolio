@@ -33,3 +33,9 @@ Open `index.html` in a browser; no server is needed.
 In the repository on GitHub, go to **Settings → Pages**, set the source to
 **Deploy from a branch**, pick `main` and `/ (root)`, and save. The site appears at
 `https://jadonchan27-pixel.github.io/jadonchanportfolio/`.
+
+## Making updates show up right away
+
+Browsers keep a copy of `styles.css`, `data.js` and `app.js` for a few minutes. After
+changing any of them, bump the `?v=` number on that file in `index.html` so
+visitors get the new version immediately.
