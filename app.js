@@ -189,6 +189,13 @@
         x.summary ? rv(h('div', { class: 'block' },
           h('div', { class: 'label' }, 'About this project'),
           h('p', { class: 'prose long' }, x.summary))) : null,
+        (x.sections || []).map(function (sec, k) {
+          var sx = { id: x.id + '-s' + k, title: sec.heading || x.title, images: sec.images || [] };
+          return rv(h('section', { class: 'block sub' },
+            sec.heading ? h('h3', null, sec.heading) : null,
+            sx.images.length ? media(sx) : null,
+            sec.text ? h('p', { class: 'prose long' }, sec.text) : null));
+        }),
         prev || next ? rv(h('nav', { class: 'pager', 'aria-label': 'More projects' },
           prev ? h('button', { class: 'btn small', type: 'button', onclick: function () { show(prev.id); } }, '← ' + prev.title) : h('span'),
           next ? h('button', { class: 'btn small', type: 'button', onclick: function () { show(next.id); } }, next.title + ' →') : null)) : null));

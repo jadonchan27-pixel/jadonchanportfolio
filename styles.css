@@ -99,6 +99,8 @@ dialog { color: var(--ink); }
 .tags { display: flex; flex-wrap: wrap; gap: 8px; }
 .tag { font: 500 13px/1 var(--mono); padding: 7px 11px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); }
 .block { display: flex; flex-direction: column; gap: 10px; }
+.block.sub { gap: 14px; border-top: 1px solid var(--line); padding-top: 24px; }
+.block.sub h3 { font: 600 28px/1.1 var(--display); }
 
 .media { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
 .stage { display: block; width: 100%; aspect-ratio: 16 / 10; padding: 0; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: var(--sunk); cursor: zoom-in; }
